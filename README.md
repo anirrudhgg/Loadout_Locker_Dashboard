@@ -1,31 +1,51 @@
-# Operating Systems and Web Computing Project
-This is the Final Project for an OperatingSystems/Web Computing Project and uses Dart programming language. This repository contains 2 parts:
+# Loadout Locker | Gaming Configuration Dashboard
 
-I. CONTENTS
-1. A Demo project created using the flutter extension within VS code. Once the extension is downloaded, the extension can be accessed via terminal on mac. 
-This opens a Webpage on the browser which has a title 'Flutter Demo Home Page'. It also contains a button on the bottom right with a '+' logo and a counter in
-the middle of the screen that updates everytime the button is clicked.
-2. The Final Project
-This Opens a webpage on the browser which was created using the flutter extension on VS code. It is called 'Loadout Locker' and its a webpage where you can
-choose your mode of play (either PC or console which is further split into xbox or ps5). Within that for pc games, you can choose settings such as 'DPI', 
-'Sensitivty' and 'Graphics Quality', For Console games you can input the numerical percentage value of how much of the game you have completed.
+[![Framework: Flutter](https://img.shields.io/badge/Framework-Flutter-02569B.svg?logo=flutter)](https://flutter.dev/)
+[![Language: Dart](https://img.shields.io/badge/Language-Dart-0175C2.svg?logo=dart)](https://dart.dev/)
 
+A responsive Single Page Application (SPA) built with Flutter Web. Loadout Locker provides a unified interface for gamers to track, manage, and store platform-specific settings and progression metrics across PC and console environments.
 
-II. STEPS
-The Steps to download and run the Flutter app within Vs Code and also how to use the Terminal to create the webpage 
-Note: For Mac you need to either have Xcode in apple or you should modify the settings in the safari browser and modify the code to run on the web server. (also use the name of your own files in [project_name] and [folder_name])
+---
 
-Step 1. Download the Extensions of Flutter onto your VS Code from the extensions tab
+## 🎮 Core Features
 
-Step 2. Open a new project with the flutter extension by typing 'flutter create [Project_name]' and replace the dots with the name of the project.
+* **Platform-Specific Routing:** Dynamic UI state management that routes users between PC, Xbox, and PS5 environments.
+* **Hardware Configuration State:** Captures and manages precise PC peripheral settings, including DPI, global sensitivity, and graphics quality presets.
+* **Progression Tracking:** Includes a numerical percentage tracking module for console users to monitor game completion metrics.
+* **Responsive Web Architecture:** Compiled from Dart to optimized web assets, ensuring cross-browser compatibility and responsive layout rendering.
 
-Step 3. Access the project folder by going to the terminal and typing 'cd [folder_name]'
+---
 
-Step 4. Access the 'folder_name/lib/main.dart' and then the code can be modfied as necessary 
+## 🛠️ Technology Stack
 
-Step 5. Run the terminal with 'flutter run -d web-server' and copy and paste the link onto the webpage.
+* **Frontend Framework:** Flutter (Web)
+* **Language:** Dart
+* **Architecture:** Component-based UI with local state management
 
+---
 
+## 🚀 Local Development & Execution
+
+To run this project locally, ensure you have the [Flutter SDK](https://docs.flutter.dev/get-started/install) installed.
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/Loadout-Locker-Dashboard.git
+cd Loadout-Locker-Dashboard
+```
+
+## 2. Fetch dependencies
+
+```bash
+flutter pub get
+```
+
+## 3. Run on a local web server (Chrome/Safari)
+
+```bash
+flutter run -d web-server
+```
 III. Credits
 1. Anirudh Gopishankar
 
