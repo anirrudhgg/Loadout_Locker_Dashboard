@@ -31,7 +31,7 @@ To run this project locally, ensure you have the [Flutter SDK](https://docs.flut
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Loadout-Locker-Dashboard.git
+git clone https://github.com/anirrudhgg/Loadout-Locker-Dashboard.git
 cd Loadout-Locker-Dashboard
 ```
 
