@@ -120,6 +120,14 @@ class _PCProfilePageState extends State<PCProfilePage> {
     _selectedQuality = saved['quality'];
   }
 
+  @override
+  void dispose() {
+    // Controllers hold resources, so they are released when the page closes
+    _dpiController.dispose();
+    _sensController.dispose();
+    super.dispose();
+  }
+
   void _saveSettings() {
     AppData.pcSettings[widget.gameName] = {
       'dpi': _dpiController.text,
@@ -138,8 +146,18 @@ class _PCProfilePageState extends State<PCProfilePage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            TextField(controller: _dpiController, decoration: const InputDecoration(labelText: 'DPI')),
-            TextField(controller: _sensController, decoration: const InputDecoration(labelText: 'Sensitivity')),
+            TextField(
+              controller: _dpiController,
+              decoration: const InputDecoration(labelText: 'DPI'),
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            ),
+            TextField(
+              controller: _sensController,
+              decoration: const InputDecoration(labelText: 'Sensitivity'),
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
+              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
+            ),
             const SizedBox(height: 20),
             DropdownButton<String>(
               isExpanded: true,
